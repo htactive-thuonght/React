@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Content from './components/Content';
 import ListsAndKeys from './components/ListsAndKeys';
 import Footer from './components/Footer';
+import HandlingEvent from './components/HandlingEvent';
 import './App.css';
 
 const data1 = {
@@ -22,6 +23,7 @@ function App() {
       <Header data={data1} />
       <Content />
       <ListsAndKeys lists={lists} />
+      <HandlingEvent/>
       <Footer />
     </>
   );

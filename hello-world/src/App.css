@@ -30,6 +30,7 @@
 }
 .page-footer{
   color: whitesmoke;
+  margin-top: 57px;
 }
 .navbar{
   color: white !important;
@@ -48,6 +49,10 @@
 }
 .form-inline{
   margin-left: 40px;
+}
+.btn-hhh{
+  margin: 90px;
+  margin-bottom: 50px;
 }
 @keyframes App-logo-spin {
   from {
