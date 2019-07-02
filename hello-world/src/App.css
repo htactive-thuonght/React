@@ -22,7 +22,10 @@
 .App-link {
   color: #61dafb;
 }
-.form{
+.form {
+  margin: 90px;
+}
+.ul{
   margin: 50px;
 }
 .page-footer{

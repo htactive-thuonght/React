@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 export default class Footer extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { date: new Date() };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = { date: new Date() };
+  // }
   render() {
     return (
         <footer className="page-footer font-small bg-dark pt-4">
