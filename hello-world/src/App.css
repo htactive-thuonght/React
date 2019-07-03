@@ -54,6 +54,12 @@
   margin: 90px;
   margin-bottom: 50px;
 }
+.counter{
+  margin: 90px;
+}
+.hiha{
+  margin: 5px;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

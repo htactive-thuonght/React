@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
   export default () => {
     return (
         <footer className="page-footer font-small bg-dark pt-4">
@@ -16,5 +16,5 @@ import React from 'react';
           <a href="#" className="a"> MDBootstrap.com</a>
         </div>
       </footer>
-    );
+    )
   }

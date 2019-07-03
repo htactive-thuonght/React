@@ -1,30 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 export default class Header extends Component {
   constructor(props) {
-    super(props);
-    this.state = { date: new Date() };
+    super(props)
+    this.state = { date: new Date() }
   }
 
   componentDidMount() {
     this.timerID = setInterval(
       () => this.tick(),
       1000
-    );
+    )
   }
 
   componentWillUnmount() {
-    clearInterval(this.timerID);
+    clearInterval(this.timerID)
   }
 
   tick() {
     this.setState({
       date: new Date()
-    });
+    })
   }
 
   render() {
-    const { title, menu } = this.props.data;
-    const date = this.state.date.toLocaleTimeString();
+    const { title, menu } = this.props.data
+    const date = this.state.date.toLocaleTimeString()
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-dark">
         <a className="navbar-brand" href="#">{title}</a>
@@ -46,7 +46,7 @@ export default class Header extends Component {
           </form>
         </div>
       </nav>
-    );
+    )
   }
 }
 
