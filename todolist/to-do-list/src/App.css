@@ -27,7 +27,7 @@
   margin-left: 400px;
   margin-top: 50px;
 }
-.row{
+.input-area{
   margin-left: 200px;
   margin-top: 50px;
 }
@@ -49,6 +49,27 @@
   margin-right: 100px;
   margin-top: 50px;
 }
+.inputTask{
+  border: none;
+  background-color: #fff;
+  width: 300px;
+  height: 30px;
+ 
+}
+.completed{
+  text-decoration: line-through;
+  color: red;
+}
+.done {
+  color: red;
+  text-decoration: line-through;
+}
+
+.undone {
+  color: #61DAFB;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

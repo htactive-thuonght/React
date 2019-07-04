@@ -17,17 +17,45 @@ export default class App extends Component {
     super(props);
     this.state = {
       listsTask: [
-        { id: 1, name: "Đổ rác" },
-        { id: 2, name: "Hút bụi" },
-        { id: 3, name: "Nấu ăn" },
-        { id: 5, name: "Giặt đồ" }
+        { id: 1, name: "Đổ rác", isComplete: true},
+        { id: 2, name: "Hút bụi", isComplete: false },
+        { id: 3, name: "Nấu ăn", isComplete: true },
+        { id: 5, name: "Giặt đồ", isComplete: false }
       ]
     };
   }
-  addTask = listsTask => {
-    const oldTasks = this.state.listsTask;
-    this.setState({ listsTask: [...oldTasks, listsTask] });
+  generateId = (length) => {
+    var result = '';
+    var characters =
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for (let i = 0; i < length; i++) {
+        var random = Math.floor(Math.random() * charactersLength); //floor để làm tròn
+        result += characters.charAt(random);// charAt để trả về kí tự of chuỗi
+    }
+    return result;
+}
+  addTask = task => {
+    const oldTasks = this.state.listsTask.concat({
+      id: this.generateId(3), name: task,isComplete: false
+    });
+
+    // this.setState({ listsTask: [...oldTasks, listsTask] });
+    this.setState({
+      listsTask: oldTasks
+    })
   };
+  deleteTodo = ( id) => {
+    // event.preventDefault();
+    let index = this.state.listsTask.findIndex(t => t.id == id)
+    console.log(index)
+    let taskRemove = this.state.listsTask
+    taskRemove = this.state.listsTask.splice(index, 1);
+    this.setState({
+      listsTask: taskRemove
+    })
+    console.log(this.state)
+}
 
   render() {
     return (
@@ -36,7 +64,7 @@ export default class App extends Component {
         <AddTask addItem={this.addTask} />
         <ProgressTask />
         <ButtonHandling />
-        <ShowTask listsTask={this.state.listsTask} />
+        <ShowTask listsTask={this.state.listsTask} deleteTodo={this.deleteTodo}/>
       </>
     );
   }
