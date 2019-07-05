@@ -5,8 +5,8 @@ export default class ShowTask extends Component {
     super(props)
     console.log(this.props.listsTask)
   }
-  onClickClose = () => {
-    this.props.deleteTodo(this.props.listsTask.id);
+  onClickClose = (id) => {
+    this.props.deleteTodo(id);
   }
   render() {
     return (
@@ -23,7 +23,7 @@ export default class ShowTask extends Component {
            </div>
            <div className="col-md-1 col-xs-1 col-lg-1 col-sm-1 delete-icon-area">
              <a   id="save"><i id="editTask"  className="fa fa-pencil" /></a>
-             <a   data-confirm="Are you sure to delete this item?"><i id="deleteTask"  className="fa fa-trash" onClick={this.onClickClose} /></a>
+             <a   data-confirm="Are you sure to delete this item?"><i id="deleteTask"  className="fa fa-trash" onClick={() => this.onClickClose(list.id)} /></a>
            </div>
          </div>
               </li>

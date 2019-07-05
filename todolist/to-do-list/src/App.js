@@ -39,22 +39,22 @@ export default class App extends Component {
     const oldTasks = this.state.listsTask.concat({
       id: this.generateId(3), name: task,isComplete: false
     });
-
     // this.setState({ listsTask: [...oldTasks, listsTask] });
     this.setState({
       listsTask: oldTasks
     })
   };
-  deleteTodo = ( id) => {
-    // event.preventDefault();
-    let index = this.state.listsTask.findIndex(t => t.id == id)
-    console.log(index)
-    let taskRemove = this.state.listsTask
-    taskRemove = this.state.listsTask.splice(index, 1);
+  deleteTodo = (id) => {
+    let taskRemove = this.state.listsTask.filter(t => t.id !== id)
     this.setState({
       listsTask: taskRemove
     })
-    console.log(this.state)
+    // this.setState((prevState, currProps) => ({
+    //   listsTask: taskRemove,
+    //   count: prevState.count + 1
+    // }), () => {
+    //   console.log(sdfsdf)
+    // })
 }
 
   render() {
