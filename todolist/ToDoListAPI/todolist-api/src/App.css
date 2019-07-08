@@ -1,5 +1,11 @@
 .App {
   text-align: center;
+
+}
+#root{  
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 50px;
 }
 
 .App-logo {
@@ -22,43 +28,42 @@
 .App-link {
   color: #61dafb;
 }
-.header{
+/* .header{
   color: green;
   margin-left: 400px;
   margin-top: 50px;
-}
-.input-area{
-  margin-left: 200px;
-  margin-top: 50px;
-}
+} */
 .progress{
   width: 665px;
   margin-left: 230px;
   margin-top: 30px;
 }
-.btnC{
+/* .btnC{
   margin-left: 200px;
   margin-top: 40px;
-}
-.btn-btn{
+} */
+/* .btn-btn{
   width: 145px;
   margin: 20px;
-}
-.ul{
+} */
+/* .ul{
   margin-left: 200px;
-  margin-right: 100px;
-  margin-top: 50px;
-}
-.inputTask{
+  margin-right: 100px; 
+   margin-top: 50px;
+} */
+#inputTask{
   border: none;
   background-color: #fff;
   width: 300px;
   height: 30px;
  
 }
-.complete{
+#complete{
   text-decoration: line-through;
   color: green;
+}
+.disabledInput{
+  pointer-events: none
 }
 
 .undone {
