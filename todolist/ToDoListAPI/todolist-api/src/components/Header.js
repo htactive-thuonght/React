@@ -1,8 +1,4 @@
-import React from 'react'
+import React from "react";
 export default () => {
-  return (
-    <h1 className="header">My Todo List</h1>
-  )
-}
-
-
+  return <h1 className="header">My Todo List</h1>;
+};

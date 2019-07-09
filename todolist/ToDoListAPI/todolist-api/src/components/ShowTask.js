@@ -10,11 +10,6 @@ export default class ShowTask extends Component {
   onClickClose = id => {
     this.props.delete(id);
   };
-  onClickToDone = id => {(
-    this.props.markTodoDone(id)
-  )
-    
-  };
   handleChange = event => {
     this.setState({ value: event.target.value });
   };
