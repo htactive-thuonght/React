@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import ChildrenTopics from '../pages/ChildrenTopics'
+
 const Topic = () => {
   return (
     <div>
@@ -16,8 +16,6 @@ const Topic = () => {
           <Link to={`/props-v-state`}>Props v. State</Link>
         </li>
       </ul>
-
-      <Route path={`/:topicId`} component={ChildrenTopics} />
       <Route
         exact
         // path={match.path}
