@@ -1,13 +1,9 @@
-import React, { Component } from "react";
-export default class FormLogin extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+import React from "react";
+class Login extends React.Component {
   render() {
-    const listTask = this.state;
     return (
-      <div>
+      <>
+         <div>
         <form className="form-login" onSubmit={this.handleSubmit}>
           <div className="form-group">
             <label htmlFor="exampleInputEmail1">Your name</label>
@@ -29,6 +25,9 @@ export default class FormLogin extends Component {
           <input type="submit" className="btn btn-primary" value="ADD" />
         </form>
       </div>
+      </>
     );
   }
 }
+
+export default Login;
